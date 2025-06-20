@@ -1,0 +1,120 @@
+:root {
+        --branco: #ffffff;
+        --preto: #000000;
+        --marrom: #5c4033;
+        --verde-musgo: #839e61;
+        --verdeClaro:#CBDDB5;
+        --verde: #A8CA7E;
+        --fundo: #874600;
+        }
+
+* {
+        font-family: Arial, Helvetica, sans-serif;
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        }
+
+
+body {
+        background-color: var(--branco);
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        color: var(--marrom);
+        }
+
+/* MENU DE NAVEGAÇÃO */
+nav {
+        background-color: var(--verde-musgo);
+        padding: 1rem 2rem;
+        }
+
+.nav-links {
+        display: flex;
+        justify-content: flex-end;
+        gap: 2rem;
+        list-style: none;
+        }
+
+.nav-links a {
+        text-decoration: none;
+        color: var(--branco);
+        font-weight: bold;
+        transition: color 10s;
+        }
+
+.nav-links a:hover {
+        color: var(--verde);
+        }
+
+/* HEADER */
+header {
+        display: flex;
+        justify-content: flex-start; /* Alinhado à esquerda */
+        align-items: center;
+        height: 90vh;
+        padding: 2rem;
+        background-color: var(--branco);
+        text-align: left;
+        }
+
+
+.logo {
+        font-size: 4rem;
+        font-weight: bold;
+        color: var(--marrom);
+        animation: slideIn 5s ease-out forwards;
+        opacity: 0;
+        }
+  
+h2.txt{
+        margin-left: 20px;
+        font-size: 1em;
+        color: var(--preto);
+        animation: slideIn 5s ease-out forwards;
+        opacity: 0;
+}
+
+@keyframes slideIn {
+0% {
+        transform: translateX(-100px);
+        opacity: 0;
+        }
+        100% {
+        transform: translateX(0);
+        opacity: 1;
+        }
+        }
+
+/* RESPONSIVIDADE */
+@media (max-width: 1024px) {
+        .logo {
+        font-size: 3.5rem;
+        }
+        }
+
+@media (max-width: 605px) {
+header {
+        justify-content: center;
+        text-align: center;
+        }
+
+.logo {
+        font-size: 2.8rem;
+        }
+
+.nav-links {
+        flex-direction: column;
+        align-items: center;
+        }
+        }
+
+ @media (max-width: 480px) {
+ .logo {
+        font-size: 2.2rem;
+        padding: 0 1rem;
+        }
+
+.nav-links {
+        gap: 1rem;
+        }
+        }
