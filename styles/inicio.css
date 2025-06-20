@@ -20,6 +20,7 @@ body {
 }
 
 header {
+  font-family: Arial, Helvetica, sans-serif;
   background-image: linear-gradient(to left, var(--verdeClaro), var(--verde-musgo));
   color: var(--preto);
   margin: 0;
@@ -41,6 +42,7 @@ main {
 }
 
 h2.titulo {
+  margin: 0;
   background-image: linear-gradient(to left, var(--verdeClaro), var(--verde-musgo));
   text-align: center;
   color: var(--preto);
