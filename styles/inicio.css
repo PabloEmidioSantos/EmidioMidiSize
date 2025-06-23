@@ -33,6 +33,37 @@ header p {
   color: var(--preto);
 }
 
+nav {
+  padding: 1rem 2rem;
+  }
+
+a {
+  text-decoration: none;
+}
+
+.nav-links {
+  display: flex;
+  justify-content: center;
+  margin-top: 2%;
+  gap: 2rem;
+  list-style: none;
+  }
+
+.nav-links a {
+  text-decoration: none;
+  color: var(--preto);
+  font-weight: bold;
+
+  } 
+
+nav a:hover {
+  transition: color 0.3s;
+}
+
+nav a:hover {
+  color: var(--branco);
+}
+
 main {
   display: flex;
   flex-wrap: wrap;
@@ -41,13 +72,13 @@ main {
   padding: 4rem;
 }
 
+
 h2.titulo {
   margin: 0;
   background-image: linear-gradient(to left, var(--verdeClaro), var(--verde-musgo));
   text-align: center;
   color: var(--preto);
   padding: 1rem;
-  border-radius: 10px;
 }
 
 .produto {

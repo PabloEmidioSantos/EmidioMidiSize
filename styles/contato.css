@@ -1,0 +1,139 @@
+:root {
+      --branco: #ffffff;
+      --preto: #000000;
+      --marrom: #5c4033;
+      --verde-musgo: #839e61;
+      --verdeClaro: #CBDDB5;
+      --verdeBemClaro: #cbddb5b1;
+      --verde: #A8CA7E;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: Arial, Helvetica, sans-serif;
+    }
+
+    body {
+      background-image: url('../imgs/photo3ofc.jpg');
+      background-size: cover;
+      background-attachment: scroll;
+      color: var(--preto);
+      padding: 2rem;
+    }
+
+    h2 {
+      text-align: center;
+      color: var(--marrom);
+      margin-bottom: 1rem;
+    }
+
+    a.whatsapp-link{
+      color: #3700ff;
+      text-decoration: none;
+      font-weight: bold;
+      display: inline-block;
+      margin-bottom: 1rem;
+      transition: color 0.3s;
+    }
+
+    .contato-container {
+      max-width: 600px;
+      margin: 0 auto;
+      background-color: var(--verdeBemClaro);
+      padding: 2rem;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+    }
+
+    label {
+      font-weight: bold;
+      color: var(--preto);
+    }
+
+    input, textarea {
+      padding: 0.8rem;
+      border: 1px solid var(--verde-musgo);
+      border-radius: 5px;
+      font-size: 1rem;
+    }
+
+    input:focus, textarea:focus {
+      outline: none;
+      border-color: var(--verde-musgo);
+    }
+
+    button {
+      background-color: var(--verde-musgo);
+      color: var(--branco);
+      border: none;
+      padding: 0.8rem;
+      font-size: 1rem;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background-color 1s ;
+    }
+
+    button:hover {
+      background-color: var(--preto);
+    }
+    
+    button.voltar {
+      text-decoration: none;
+      background-color: var(--preto);
+      color: var(--branco);
+      margin-top: 1rem;
+      width: 25%;
+    }
+
+    button.voltar a {
+    text-decoration: none;
+    color: var(--branco);
+    }
+
+    button.voltar:hover {
+      background-color: var(--branco);
+      color: var(--preto);
+    }
+
+    button.voltar a:hover{
+        text-decoration: none;
+        color: var(--preto);
+    }
+    
+    @media (max-width: 800px) {
+      .contato-container {
+        padding: 1.5rem;
+      }
+
+      input, textarea {
+        font-size: 0.95rem;
+      }
+    }
+
+    @media (max-width: 600px) {
+      .contato-container {
+        padding: 1rem;
+      }
+
+      input, textarea {
+        font-size: 0.9rem;
+      }
+    }
+
+    @media (max-width: 500px) {
+      .contato-container {
+        padding: 1rem;
+      }
+
+      input, textarea {
+        font-size: 0.9rem;
+      }
+    }

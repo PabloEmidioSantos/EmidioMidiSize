@@ -42,7 +42,7 @@ a{
         text-decoration: none;
         color: var(--branco);
         font-weight: bold;
-        transition: color 10s;
+        transition: color 1s;
         }
 
 .nav-links a:hover {
