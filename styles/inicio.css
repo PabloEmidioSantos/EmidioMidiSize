@@ -8,6 +8,7 @@
   --fundo: #874600;
 }
 
+/* Reset */
 * {
   font-family: Arial, Helvetica, sans-serif;
   margin: 0;
@@ -15,27 +16,98 @@
   box-sizing: border-box;
 }
 
+/* Botão Tema */
+#botao-tema {
+  position: fixed;
+  top: 1rem;
+  right: 1rem;
+  background-color: transparent;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+  z-index: 1000;
+}
+
+#botao-tema:hover {
+  transform: scale(1.1);
+}
+
+#mensagem-tema {
+  margin: 1rem;
+  font-weight: bold;
+}
+
+/* Tema Escuro */
+body.dark {
+  background-color: #1c1c1c;
+  color: var(--branco);
+}
+
+body.dark header {
+  background-image: linear-gradient(to left, #2e2e2e, #1a1a1a);
+  color: var(--branco);
+}
+
+body.dark header p {
+  color: var(--branco);
+}
+
+body.dark .nav-links a {
+  color: var(--branco);
+}
+
+body.dark nav a:hover {
+  color: var(--verdeClaro);
+}
+
+body.dark h2.titulo {
+  background-image: linear-gradient(to left, #333, #111);
+  color: var(--branco);
+}
+
+body.dark .produto {
+  background-color: #333;
+  color: var(--branco);
+}
+
+body.dark .img {
+  background-color: #1a1a1a;
+}
+
+body.dark .preço {
+  color: var(--verdeClaro);
+}
+
+body.dark footer {
+  background-color: #111;
+  color: var(--verdeClaro);
+}
+body.dark video{
+  border: 1px solid white;
+}
+
+/*---------------------------------------------Tema Claro ----------------------------------------------*/
 body {
   background-color: var(--branco);
 }
 
 header {
-  font-family: Arial, Helvetica, sans-serif;
   background-image: linear-gradient(to left, var(--verdeClaro), var(--verde-musgo));
   color: var(--preto);
-  margin: 0;
-  padding: 20px;
+  padding: 1rem;
   text-align: center;
 }
 
 header p {
   font-weight: bold;
   color: var(--preto);
+  font-size: 1rem;
+  margin-top: 0.5rem;
 }
 
 nav {
   padding: 1rem 2rem;
-  }
+}
 
 a {
   text-decoration: none;
@@ -44,23 +116,19 @@ a {
 .nav-links {
   display: flex;
   justify-content: center;
-  margin-top: 2%;
-  gap: 2rem;
+  margin-top: 1rem;
+  gap: 1.2rem;
   list-style: none;
-  }
+}
 
 .nav-links a {
   text-decoration: none;
   color: var(--preto);
   font-weight: bold;
-
-  } 
-
-nav a:hover {
-  transition: color 0.3s;
 }
 
 nav a:hover {
+  transition: color 0.3s;
   color: var(--branco);
 }
 
@@ -68,17 +136,17 @@ main {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 2vw;
-  padding: 4rem;
+  gap: 1.5rem;
+  padding: 2rem 1rem;
 }
 
-
 h2.titulo {
-  margin: 0;
+  margin: 1rem 0 0.5rem 0;
   background-image: linear-gradient(to left, var(--verdeClaro), var(--verde-musgo));
   text-align: center;
   color: var(--preto);
-  padding: 1rem;
+  padding: 0.8rem;
+  font-size: 1.6rem;
 }
 
 .produto {
@@ -88,22 +156,23 @@ h2.titulo {
   background-color: var(--verde-musgo);
   width: 250px;
   border-radius: 20px;
-  padding: 1rem;
+  padding: 0.8rem;
+  margin-bottom: 1rem;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.715);
   color: var(--branco);
   text-align: center;
 }
 
 .img {
-  width: 200px;
-  height: 200px;
+  width: 180px;
+  height: 180px;
   border-radius: 50%;
   overflow: hidden;
   display: flex;
   align-items: center;
   justify-content: center;
   background-color: var(--branco);
-  margin-bottom: 1rem;
+  margin-bottom: 0.5rem;
 }
 
 .img img {
@@ -119,20 +188,41 @@ h2.titulo {
   font-size: 1.2rem;
 }
 
+video{
+  border-radius: 16px;
+  border: 1px solid black;
+  width: 364px;
+  height: 300px;
+}
+
 footer {
   background-color: #5c4033;
   color: var(--branco);
   text-align: center;
-  padding: 2rem;
+  padding: 1.5rem;
+  font-size: 0.95rem;
 }
 
-/* RESPONSIVIDADE */
+
+
+/*----------------------------------------RESPONSIVIDADE-------------------------------------- */
+
+
+
+
+/*dascktops*/
+@media (max-width: 2000px){
+  header > h2 > p{
+    margin-top: 50px;
+    font-size: 3em;
+  }
+}
 
 /* Tablets */
 @media (max-width: 900px) {
   main {
-    padding: 2rem;
-    gap: 1.5rem;
+    padding: 2rem 1rem;
+    gap: 1.2rem;
   }
 
   .produto {
@@ -142,25 +232,32 @@ footer {
   }
 
   .img {
+    width: 160px;
+    height: 160px;
     margin-bottom: 0.5rem;
   }
 }
 
 /* Celulares */
 @media (max-width: 500px) {
-  h2.titulo {
-    font-size: 1.4rem;
-    padding: 0.5rem;
+  .nav-links {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  main {
+    padding: 1rem 0.5rem;
+    gap: 1rem;
   }
 
   .produto {
     width: 100%;
-    padding: 1rem 0.5rem;
+    padding: 0.6rem;
   }
 
   .img {
-    width: 150px;
-    height: 150px;
+    width: 140px;
+    height: 140px;
   }
 
   .preço {
@@ -173,5 +270,10 @@ footer {
 
   header p {
     font-size: 0.9rem;
+  }
+
+  h2.titulo {
+    font-size: 1.4rem;
+    padding: 0.5rem;
   }
 }
