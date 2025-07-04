@@ -17,7 +17,7 @@
 
 
 body {
-        background-color: var(--branco);
+        background-color: var(--branc);
         font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
         color: var(--marrom);
         }
@@ -76,6 +76,45 @@ h2.txt{
         animation: slideIn 5s ease-out forwards;
         opacity: 0;
 }
+
+
+/*-----BOTÃO-DE-TEMAS-----*/
+#botao-tema {
+  position: fixed;
+  top: 1rem;
+  right: 1rem;
+  background-color: transparent;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+  z-index: 1000;
+}
+
+#botao-tema:hover {
+  transform: scale(1.1);
+}
+
+#mensagem-tema {
+  margin: 1rem;
+  font-weight: bold;
+}
+
+
+/* Tema escuro completo */
+body.dark {
+  background-color: #1c1c1c;
+  color: var(--branco);
+}
+
+body.dark header {
+  background-color: #1c1c1c; /* mesmo tom escuro do body */
+}
+
+body.dark .logo,
+body.dark .txt {
+  color: var(--branco);
+}
+
 
 @keyframes slideIn {
 0% {
