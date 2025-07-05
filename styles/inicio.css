@@ -33,15 +33,22 @@
 }
 
 #mensagem-tema {
-  margin: 1rem;
+  display: none;
   font-weight: bold;
 }
 
+/*----------Tema Escuro----------*/
 
+body.dark{
+  background-color: #111;
+}
 
 body.dark header {
   background-image: linear-gradient(to left, #2e2e2e, #1a1a1a);
   color: var(--branco);
+}
+body.dark main{
+  background-image: url(../imgs/fundo1.jpg);
 }
 
 body.dark header p {
@@ -84,21 +91,28 @@ body.dark video{
 
 /*---------------------------------------------Tema Claro ----------------------------------------------*/
 body {
-  background-color: var(--branco);
+  background-color: var(--marrom);
 }
 
-header {
-  background-image: linear-gradient(to left, var(--verdeClaro), var(--verde-musgo));
-  color: var(--preto);
-  padding: 1rem;
-  text-align: center;
-}
+div.img-fundo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 2rem;
+    background-image: url(../imgs/fundo4.jpg);
+    background-repeat: no-repeat;
+    background-position-y: top;
+    background-position-x: center;
+    background-size: cover;
+    }
 
 header p {
   font-weight: bold;
-  color: var(--preto);
-  font-size: 1rem;
+  font-size: 2rem;
   margin-top: 0.5rem;
+  color: rgb(51, 0, 15);
 }
 
 nav {
@@ -109,6 +123,8 @@ a {
   text-decoration: none;
 }
 
+
+
 .nav-links {
   display: flex;
   justify-content: center;
@@ -118,29 +134,34 @@ a {
 }
 
 .nav-links a {
+  font-weight: 600;
   text-decoration: none;
   color: var(--preto);
   font-weight: bold;
 }
 
 nav a:hover {
-  transition: color 0.3s;
-  color: var(--branco);
+  transition: font-weight 0.5s;
+  font-weight: 400;
 }
 
 main {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+  background-image: url(../imgs/fundo2.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
   gap: 1.5rem;
   padding: 2rem 1rem;
 }
 
 h2.titulo {
-  margin: 1rem 0 0.5rem 0;
-  background-image: linear-gradient(to left, var(--verdeClaro), var(--verde-musgo));
+  margin: 0;
+  background-color: var(--verde-musgo);
   text-align: center;
-  color: var(--preto);
+  color: var(--branco);
   padding: 0.8rem;
   font-size: 1.6rem;
 }
@@ -185,8 +206,8 @@ h2.titulo {
 }
 
 video{
-  border-radius: 16px;
   border: 1px solid black;
+  border-radius: 100%;
   width: 364px;
   height: 300px;
 }
@@ -198,6 +219,14 @@ footer {
   padding: 1.5rem;
   font-size: 0.95rem;
 }
+
+
+
+
+/*----------Animações----------*/
+
+
+
 
 
 

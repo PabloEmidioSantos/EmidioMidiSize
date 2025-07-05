@@ -38,6 +38,17 @@
       transition: color 0.3s;
     }
 
+    p.whatsapp-link > a{
+      text-decoration: none;
+      color: black;
+    }
+    
+
+    a.direitos{
+      text-decoration: none;
+      color: #000000;
+    }
+
     .contato-container {
       max-width: 600px;
       margin: 0 auto;

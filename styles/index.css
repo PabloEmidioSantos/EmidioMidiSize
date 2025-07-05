@@ -17,9 +17,9 @@
 
 
 body {
-        background-color: var(--branc);
         font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-        color: var(--marrom);
+        color: var(--preto);
+        background-color: var(--verde-musgo);
         }
 
 /* MENU DE NAVEGAÇÃO */
@@ -56,26 +56,47 @@ header {
         align-items: center;
         height: 90vh;
         padding: 2rem;
-        background-color: var(--branco);
+        background-image: url(../imgs/fundo4.jpg);
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
         text-align: left;
         }
 
 
 .logo {
+        font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
         font-size: 4rem;
         font-weight: bold;
-        color: var(--marrom);
+        color: var(--verde-musgo);
         animation: slideIn 5s ease-out forwards;
         opacity: 0;
         }
   
 .txt{
-        margin-left: 20px;
+        font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+        margin-left: 30px;
+        margin-right: 30px;
         font-size: 1em;
-        color: var(--preto);
+        color: var(--verde-musgo);
         animation: slideIn 5s ease-out forwards;
         opacity: 0;
 }
+
+
+.cartao {
+  width: 300px; /* ajuste se quiser */
+  animation: slideFromRight 4s ease-out forwards;
+  opacity: 0;
+  transform: rotate(10deg);
+  border-radius: 20%;
+  box-shadow: 0 0 20px black;
+  position: relative;
+  z-index: 1;
+  margin-left: 20px;
+}
+
+
 
 
 /*-----BOTÃO-DE-TEMAS-----*/
@@ -143,20 +164,6 @@ body.dark .cartao{
     opacity: 1;
   }
 }
-
-.cartao {
-  width: 300px; /* ajuste se quiser */
-  animation: slideFromRight 4s ease-out forwards;
-  opacity: 0;
-  transform: rotate(10deg);
-  border-radius: 20%;
-  box-shadow: 0 0 20px black
-  ;
-  position: relative;
-  z-index: 1;
-  margin-left: 20px;
-}
-
 
 /* RESPONSIVIDADE */
 @media (max-width: 1024px) {

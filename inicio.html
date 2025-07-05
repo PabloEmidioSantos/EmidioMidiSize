@@ -8,26 +8,30 @@
 </head>
 <body>
     <header>
-        <h2>Bem Vindo!</h2>
-        <p>Estilo é sobre atitude, e aqui cada peça conta a sua história. Bem-vindo à Emidio Midi Size <br>
-           Onde a moda abraça todos os corpos, com conforto, autenticidade e beleza em cada detalhe.</p>
-        
-          <!-- MENU -->
-  <nav>
-    <ul class="nav-links">
-      <li><a href="inicio.html">Início</a></li>
-      <!--<li><a href="">Coleção</a></li>
-      <li><a href="#">Sobre</a></li>-->
-      <li><a href="contato.html">Contato</a></li>
-    </ul>
-  </nav>
-
-    </header>
-
+            <div class="img-fundo">
+              <h2>Bem Vindo!</h2>
+              <p class="txtI">Estilo é sobre atitude, e aqui cada peça conta a sua história.<br> 
+                Bem-vindo à Emidio Midi Size <br>
+                Onde a moda abraça todos os corpos,<br>
+                com conforto, autenticidade e beleza em cada detalhe.</p>
+              
+                <!-- MENU -->
+                    <nav>
+                      <ul class="nav-links">
+                        <li><a href="index.html">Início</a></li>
+                        <!--<li><a href="">Coleção</a></li>
+                        <li><a href="#">Sobre</a></li>-->
+                        <li><a href="contato.html">Contato</a></li>
+                      </ul>
+                    </nav>
+                  </div>
+                  
+                </header>
+                
     <h2 class="titulo">Veja nossas roupas e conjuntos</h2>
-
-    <main>
-
+                
+                <main>
+                  
   <div class="produto">
     <div class="img">
       <img src="../imgs/photo1ofc.jpg" alt="Produto">
@@ -55,20 +59,21 @@
   <div class="texto"></div>
 
   <div class="video">
-    <video while autoplay muted>
-    <source src="../imgs/vdo1ofc.mp4" type="video/mp4">
+    <video src="../imgs/vdo1ofc.mp4" type="video/mp4" autoplay muted loop>
     Seu navegador não suporta a tag de vídeo.
     </video>
   </div><br>
 
 
-      <button onclick="alternarTema()" id="botao-tema">🌙</button>
-      <p id="mensagem-tema">Tema claro ativado ☀️</p><br>
-
 
 
   <!-- Repita os blocos acima para os outros produtos -->
 </main>
+      <div class="doBotao">
+        <button onclick="alternarTema()" id="botao-tema">🌙</button>
+        <p id="mensagem-tema"></p><br>
+      </div>
+
     <footer>
         <p>Site feito por Pablo Emido dos Santo, todos os direitos reservados &copy;2025</p>
     </footer>
