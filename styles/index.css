@@ -69,7 +69,7 @@ header {
         opacity: 0;
         }
   
-h2.txt{
+.txt{
         margin-left: 20px;
         font-size: 1em;
         color: var(--preto);
@@ -82,7 +82,7 @@ h2.txt{
 #botao-tema {
   position: fixed;
   top: 1rem;
-  right: 1rem;
+  left: 1rem;
   background-color: transparent;
   border: none;
   font-size: 1.5rem;
@@ -115,6 +115,10 @@ body.dark .txt {
   color: var(--branco);
 }
 
+body.dark .cartao{
+        box-shadow: 0 0 30px 10px var(--verde-musgo);
+}
+
 
 @keyframes slideIn {
 0% {
@@ -126,6 +130,33 @@ body.dark .txt {
         opacity: 1;
         }
         }
+
+@keyframes slideFromRight {
+  0% {
+    width: 0px;
+    transform: translateX(300px) rotate(10deg);
+    opacity: 0;
+  }
+  100% {
+    width: 300px;
+    transform: translateX(0) rotate(10deg);
+    opacity: 1;
+  }
+}
+
+.cartao {
+  width: 300px; /* ajuste se quiser */
+  animation: slideFromRight 4s ease-out forwards;
+  opacity: 0;
+  transform: rotate(10deg);
+  border-radius: 20%;
+  box-shadow: 0 0 20px black
+  ;
+  position: relative;
+  z-index: 1;
+  margin-left: 20px;
+}
+
 
 /* RESPONSIVIDADE */
 @media (max-width: 1024px) {
@@ -160,3 +191,4 @@ header {
         gap: 1rem;
         }
         }
+
