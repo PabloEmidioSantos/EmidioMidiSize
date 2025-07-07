@@ -43,8 +43,12 @@ body.dark{
   background-color: #111;
 }
 
+body.dark h2{
+  color: var(--marrom);
+  font-weight: 900;
+}
+
 body.dark header {
-  background-image: linear-gradient(to left, #2e2e2e, #1a1a1a);
   color: var(--branco);
 }
 body.dark main{
@@ -52,7 +56,13 @@ body.dark main{
 }
 
 body.dark header p {
-  color: var(--branco);
+  color: var(--preto);
+  font-weight: 900;
+  box-shadow: 0 0 10px var(--verde-musgo);
+  border-radius: 10px;
+}
+body.dark .img-fundo{
+  background-image: url(../imgs/fundo3.jpg);
 }
 
 body.dark .nav-links a {
@@ -112,7 +122,7 @@ header p {
   font-weight: bold;
   font-size: 2rem;
   margin-top: 0.5rem;
-  color: rgb(51, 0, 15);
+  color: var(--preto);
 }
 
 nav {
